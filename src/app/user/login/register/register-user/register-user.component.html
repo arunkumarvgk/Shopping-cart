@@ -1,0 +1,78 @@
+<div class="container register-user">
+			<hr>
+			<h4>Register</h4>
+			<hr>
+			<div class="row main">
+				<div class="main-login main-center">
+					<form class="form-horizontal" [formGroup]="registerForm" novalidate>		
+						<div class="form-group" [ngClass]="{'error':name.invalid && name.dirty}">
+							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<em *ngIf="name.invalid && name.dirty && name?.errors.required"> Required </em>
+							<em *ngIf="name.invalid && name.dirty && name?.errors.maxlength"> Max length 20 </em>
+							<em *ngIf="name.invalid && name.dirty && name?.errors.validateName"> Initials not allowed </em>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input formControlName="name" type="text" class="form-control" name="name" id="name"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group" [ngClass]="{'error':email.invalid && email.dirty}">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<em *ngIf="email.invalid && email.dirty && email?.errors.required"> Required </em>
+							<em *ngIf="email.invalid && email.dirty && email?.errors.nospace"> No Spaces </em>
+							<em *ngIf="email.invalid && email.dirty && email?.errors.shouldEndWithCisco"> Only cisco ID's </em>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input formControlName="email" type="text" class="form-control" name="email" id="email"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group" [ngClass]="{'error':userName.invalid && userName.dirty}">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<em *ngIf="userName.invalid && userName.dirty && userName?.errors.required"> Required </em>
+							<em *ngIf="userName.invalid && userName.dirty && userName?.errors.maxlength"> Max length 10 </em>
+							<em *ngIf="userName.invalid && userName.dirty && userName?.errors.shouldNotHaveNumbers"> No Numbers </em>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input formControlName="userName" type="text" class="form-control" name="userName" id="userName"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group" [ngClass]="{'error':password.invalid && password.dirty}">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<em *ngIf="password.invalid && password.dirty && password?.errors.required"> Required </em>
+							<em *ngIf="password.invalid && password.dirty && password?.errors.pwNotMeetingCreiteriia"> Password not Matching Cretieria </em>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input formControlName="password" type="password" class="form-control" name="password" id="password"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group" [ngClass]="{'error':confirmPassword.invalid && confirmPassword.dirty}">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<em *ngIf="confirmPassword.invalid && confirmPassword.dirty && confirmPassword?.errors.required"> Required </em>
+							<em *ngIf="confirmPassword.invalid && confirmPassword.dirty && confirmPassword?.errors.passwordMismatch"> Password Mismatch </em>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input  formControlName="confirmPassword" type="password" class="form-control" name="confirmPassword" id="confirmPassword"  />
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<button [disabled]="registerForm.invalid" class="btn btn-primary">Register</button>
+							<button  (click)="cancleRegistration()" class="btn btn-basic">Cancle</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>

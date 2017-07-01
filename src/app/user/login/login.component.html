@@ -1,0 +1,36 @@
+<div class="loginContainer">
+	<div class="row">
+	  <div class="col-md-6">
+	  	<hr>
+		<span  (click)="isAdminLogin = false ; loginForm.reset()" class="btn btn-sm btn-primary">User </span>
+		<span  (click)="isAdminLogin = true ; loginForm.reset()" class="btn btn-sm btn-primary">Admin </span>
+		<span  (click)="isUserRegister = true ; loginForm.reset() " class="btn btn-sm btn-primary">Register </span>
+		<hr>
+		<div class="container">
+			<h4 *ngIf="!isAdminLogin">Customer Login</h4>
+			<h4 *ngIf="isAdminLogin">Admin Login</h4>
+			  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" autocomplete="off" novalidate>
+					<em *ngIf="invalidCredentials && loginForm.valid">Invalid Credentials!!!</em>
+			    <div class="form-group">
+			      <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.userName?.touched">required( invalid & touched)</em>
+			      <input (ngModel)="userName" name="userName" id="userName" type="text" class="form-control"  placeholder="User Name..." required />
+			    </div>
+			    <div class="form-group" >
+			      <em *ngIf="loginForm.controls.password?.invalid && loginForm.controls.password?.dirty">required( invalid & dirty)</em>
+			      <div class="input-group add-on">
+			      	<input (ngModel)="password" name="password" id="password" [type]="passwordEye ? 'password' : 'text' " class="form-control"placeholder="Password..." emailValidator required/>
+			      	<div class="input-group-btn">
+			        <button class="btn btn-default" type="button" (click)="passwordEye=!passwordEye"><span class="glyphicon glyphicon-eye-open"></span></button>
+			      </div>
+			      </div>
+			    </div>
+			    <button type="submit" [disabled]="loginForm.invalid"  class="btn btn-primary">Login</button>
+			    <button type="button" (click)="cancle()" class="btn btn-default">Cancel</button>
+			  </form>
+		</div>
+	  </div>
+	  <div class="col-md-6">
+	  	<register-user (onCancle)="isUserRegister = $event" *ngIf="isUserRegister"></register-user>
+	  </div>
+	</div>
+</div>
