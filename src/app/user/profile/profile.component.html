@@ -1,27 +1,33 @@
-<ngb-accordion #acc="ngbAccordion">
-  <ngb-panel id="toggle-1" title="First panel">
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel id="toggle-2" title="Second">
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
-
-<p>
-  <button class="btn btn-sm btn-outline-primary" (click)="acc.toggle('toggle-1')">Toggle first</button>
-  <button class="btn btn-sm btn-outline-primary" (click)="acc.toggle('toggle-2')">Toggle second</button>
-</p>
+<md-card >   
+  <md-tab-group style="background-color:#028e92" [selectedIndex]="type">
+    <md-tab label="Profile">
+      <hr>
+      <span><b>Name : </b></span>
+      {{profileObject.firstName}} {{profileObject.lastName}} <br><br>
+      <span><b>Username : </b></span>
+      {{profileObject.userName}} <br><br>
+      <span><b>Email-ID : </b></span>
+      {{profileObject.userName}}@cisco.com<br><br>
+      <span><b>Active Since : </b></span>
+      {{activeSince | date}}<br><br>
+      <span><b>Last Login : </b></span>
+      {{lastLogin | date:'medium'}}<br><br>
+      <span><b>Address : </b></span>
+       <pre>
+        No 67, 6th Main, 13th Cross,
+        RajaRam Street, Ram Nagar,
+        Bangalore 560043
+        Karnataka
+        India
+      </pre>
+      <hr>
+    </md-tab>
+    <md-tab label="Orders" style="min-height:100%">
+      <h3>Yet to order :(</h3>
+    </md-tab>
+    <md-tab label="Specially For Your" style="min-height:100%">
+      <h4>You have 10% discount on any Item you choose Please use below code</h4>
+      <h3>ANGULAR</h3>
+    </md-tab>
+  </md-tab-group>
+</md-card>

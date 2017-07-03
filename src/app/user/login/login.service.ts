@@ -1,8 +1,12 @@
 import { Injectable } from "@angular/core";
+import { Http } from "@angular/http";
 
 @Injectable()
 export class LoginService {
+    
     currentUser : Object={};
+
+    constructor(private http:Http){}
 
     loginUser(userType: string, userName: string, password: string){
         if ((userType == "Customer" && userName === "arun" && password === "kiran")) {
@@ -28,5 +32,12 @@ export class LoginService {
         return this.currentUser["userType"] ? true :false;
     }
 
+    getProfile(){
+        return this.currentUser;
+    }
+
+    signOut(){
+        this.currentUser={};
+    }
 
 }

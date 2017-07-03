@@ -1,0 +1,10 @@
+<div class="container">
+  <md-grid-list cols="4" rowHeight="100px">
+    <md-grid-tile
+        *ngFor="let phone of products"
+        [colspan]="2"
+        [rowspan]="4">
+    {{phone.brand}} {{phone.specification.version}}
+    </md-grid-tile>
+  </md-grid-list>
+</div>

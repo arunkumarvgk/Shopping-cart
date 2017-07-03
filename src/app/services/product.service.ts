@@ -1,0 +1,638 @@
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/observable/throw';
+
+import { Product } from "app/product";
+
+@Injectable()
+export class ProductService {
+    
+    private _productUrl = 'shoppingCart/src/api/phones.json';
+
+    constructor(private http: Http){}
+
+    /*getProducts():Observable<Product[]>{
+        return this.http.get("resources/phones")
+        .map((response: Response)=>{
+            console.log(response.json()+" --------------");
+            return <Product[]>response.json();
+        }).catch(this.handleError);
+    }
+
+     getProducts(): Observable<Product[]> {
+        return this.http.get(this._productUrl)
+            .map((response: Response) => <Product[]> response.json())
+            .do(data => console.log('All: ' +  JSON.stringify(data)))
+            .catch(this.handleError);
+    }*/
+
+    getProducts() {
+        return PHONES;
+    }
+
+    getProduct(brandName: string){
+        let phoneList = new Array();
+        
+        PHONES.forEach((currVal,index)=>{
+            if(currVal.brand === brandName){
+                phoneList.push(PHONES[index]);
+            }
+        });
+        console.log(phoneList+" GetProduct");
+        return phoneList;
+    }
+
+    private handleError(error: Response){
+        console.log(error+" -> akjs");
+        return Observable.throw(error.statusText);
+
+    }
+}
+
+const PHONES = [  
+	{  
+      "brand":"Blackberry",
+      "released":"2014",
+      "specification":{  
+         "version":"SD",
+         "color":"Silver",
+         "frontCamera":"2 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":22000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":"./images/blackberry.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2014",
+      "specification":{  
+         "version":"4s",
+         "color":"Silver",
+         "frontCamera":"2 MP",
+         "rearCamera":"8 MP",
+         "RAM":"512 MB",
+         "internalStorage":"8 GB",
+         "volte":false
+      },
+      "cost":42000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2015",
+      "specification":{  
+         "version":"5s",
+         "color":"Black",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"1 GB",
+         "internalStorage":"12 GB",
+         "volte":false
+      },
+      "cost":48000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2015",
+      "specification":{  
+         "version":"5s",
+         "color":"Silver",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"1 GB",
+         "internalStorage":"12 GB",
+         "volte":false
+      },
+      "cost":48000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2015",
+      "specification":{  
+         "version":"6s",
+         "color":"Black",
+         "frontCamera":"6 MP",
+         "rearCamera":"14 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":54000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2016",
+      "specification":{  
+         "version":"6s",
+         "color":"Pink",
+         "frontCamera":"6 MP",
+         "rearCamera":"14 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":64000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2017",
+      "specification":{  
+         "version":"7s",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":72000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2017",
+      "specification":{  
+         "version":"7s",
+         "color":"Rose Gold",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":72000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2017",
+      "specification":{  
+         "version":"7s",
+         "color":"Pink",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":72000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Lenovo",
+      "released":"2016",
+      "specification":{  
+         "version":"1A",
+         "color":"Black",
+         "frontCamera":"2 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":8000,
+      "otherFeatures":[  
+         "NFC"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Lenovo",
+      "released":"2015",
+      "specification":{  
+         "version":"1B",
+         "color":"Yellow",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":false
+      },
+      "cost":10000,
+      "otherFeatures":[  
+         "NFC",
+         "4G",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Lenovo",
+      "released":"2017",
+      "specification":{  
+         "version":"2A",
+         "color":"Green",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":12000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"LG",
+      "released":"2017",
+      "specification":{  
+         "version":"2A",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"4 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":24000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"MI",
+      "released":"2016",
+      "specification":{  
+         "version":"3",
+         "color":"Yellow",
+         "frontCamera":"8 MP",
+         "rearCamera":"13 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"MI",
+      "released":"2017",
+      "specification":{  
+         "version":"4",
+         "color":"Yellow",
+         "frontCamera":"13 MP",
+         "rearCamera":"16 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Motorola",
+      "released":"2015",
+      "specification":{  
+         "version":"2",
+         "color":"Black",
+         "frontCamera":"5 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":9999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Motorola",
+      "released":"2016",
+      "specification":{  
+         "version":"3",
+         "color":"Black",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Motorola",
+      "released":"2017",
+      "specification":{  
+         "version":"4",
+         "color":"Black",
+         "frontCamera":"13 MP",
+         "rearCamera":"18 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Nexus",
+      "released":"2017",
+      "specification":{  
+         "version":"3.4",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"21 MP",
+         "RAM":"3 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":34999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2015",
+      "specification":{  
+         "version":"C7",
+         "color":"White",
+         "frontCamera":"5 MP",
+         "rearCamera":"13 MP",
+         "RAM":"1.5 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":9999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2016",
+      "specification":{  
+         "version":"C8",
+         "color":"Black",
+         "frontCamera":"8 MP",
+         "rearCamera":"13 MP",
+         "RAM":"3 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":12999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2017",
+      "specification":{  
+         "version":"J5",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"16 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":false
+      },
+      "cost":14999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2017",
+      "specification":{  
+         "version":"J7",
+         "color":"White",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":16999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Sony",
+      "released":"2014",
+      "specification":{  
+         "version":"MA",
+         "color":"White",
+         "frontCamera":"5 MP",
+         "rearCamera":"8 MP",
+         "RAM":"1 GB",
+         "internalStorage":"8 GB",
+         "volte":false
+      },
+      "cost":12999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Sony",
+      "released":"2015",
+      "specification":{  
+         "version":"CA",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"1 GB",
+         "internalStorage":"8 GB",
+         "volte":true
+      },
+      "cost":16999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Sony",
+      "released":"2016",
+      "specification":{  
+         "version":"Xperia",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":18999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Sony",
+      "released":"2016",
+      "specification":{  
+         "version":"Xperia Dual XA",
+         "color":"White",
+         "frontCamera":"8 MP",
+         "rearCamera":"13 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":15999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Sony",
+      "released":"2017",
+      "specification":{  
+         "version":"Xperia XA",
+         "color":"White",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":24999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Sony",
+      "released":"2017",
+      "specification":{  
+         "version":"Xperia XA",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":24999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   },
+   {  
+      "brand":"Sony",
+      "released":"2017",
+      "specification":{  
+         "version":"XZ",
+         "color":"White",
+         "frontCamera":"21 MP",
+         "rearCamera":"23 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":45999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":""
+   }
+];
