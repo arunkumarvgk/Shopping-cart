@@ -15,7 +15,9 @@ export class PhoneDetailComponent implements OnInit {
     constructor(private route: ActivatedRoute, private loginSerivce: LoginService) { }
   
     ngOnInit() {
-      this.route.data.forEach((data)=>{ this.phone = data["phone"] });
+      this.route.data.forEach((data)=>{ 
+          this.phone = data["phone"][0];
+      });
       this.isUserLogged=this.loginSerivce.isAuthenticated();
     }
 

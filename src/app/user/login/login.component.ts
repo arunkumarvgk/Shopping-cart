@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit, OnChanges {
   }
 
   login(formValues) {
-    if (this.isAdminLogin) {
+    // Do if your are calling backend server for authentication
+   /* if (this.isAdminLogin) {
       if (this.loginService.loginUser("Admin", formValues.userName , formValues.password)){
         this.router.navigate(["/admin"]);
       }else{
@@ -50,6 +51,32 @@ export class LoginComponent implements OnInit, OnChanges {
           alert("Invalid Credentials");
           console.log(err);
       });
+    }*/
+
+    if (this.isAdminLogin) {
+      if(formValues.userName == 'kiran' && formValues.password == 'arun'){
+        this.router.navigate(["/admin"]);
+        this.loginService.currentUser= {  name:"KiranKumar Venkatesh",
+                                          userType:"customer",
+                                          userName:"kiranvgk",
+                                          firstName:"KiranKumar",
+                                          lastName:"Venkatesh" 
+                                        };
+      }else{
+        this.invalidCredentials=true;
+      }
+    }else{
+      if(formValues.userName == 'arun' && formValues.password == 'kiran'){
+        this.loginService.currentUser= {  name:"ArunKumar Venkatesh",
+                                          userType:"customer",
+                                          userName:"arunkvgk",
+                                          firstName:"ArunKumar",
+                                          lastName:"Venkatesh" 
+                                        };
+        this.router.navigate(["/Home"]);
+      }else{
+        this.invalidCredentials=true;
+      }
     }
   }
 

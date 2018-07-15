@@ -23,8 +23,9 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.productService.getProductsList()
       .subscribe(products => {
-        this.brands=products;         
-        return this.brands;
+        return this.brands=products.filter(function(item, pos, self) {
+            return self.indexOf(item) == pos;
+        });         
       });
   }
 
