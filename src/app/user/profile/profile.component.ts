@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit , OnDestroy{
   activeSince = new Date(2008, 3, 15);
   lastLogin = new Date(2017, 6, 27);
 
-  profileObject: Object={
+  profileObject:any={
     userType:"",
     userName:"",
     firstName:"",

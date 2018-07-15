@@ -34,16 +34,22 @@ export class LoginComponent implements OnInit, OnChanges {
   login(formValues) {
     if (this.isAdminLogin) {
       if (this.loginService.loginUser("Admin", formValues.userName , formValues.password)){
-        this.router.navigate(["/Home"]);
+        this.router.navigate(["/admin"]);
       }else{
         this.invalidCredentials=true;
       }
     } else {
-      if (this.loginService.loginUser("Customer", formValues.userName , formValues.password)){
-        this.router.navigate(["/Home"]);
-      }else{
-        this.invalidCredentials=true;
-      }
+      this.loginService.loginUser("Customer", formValues.userName , formValues.password)
+      .subscribe(res=>{
+          this.loginService.currentUser=res.json();
+          let name = res.json().name;
+          this.router.navigate(["/Home"]);
+          alert("welcome "+name+" !");
+          console.log(res);
+      },err=>{
+          alert("Invalid Credentials");
+          console.log(err);
+      });
     }
   }
 

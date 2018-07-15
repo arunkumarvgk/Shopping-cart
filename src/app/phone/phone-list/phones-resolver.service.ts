@@ -3,10 +3,10 @@ import { Resolve, ActivatedRouteSnapshot } from "@angular/router";
 import { ProductService } from "app/services/product.service";
 
 @Injectable()
-export class PhoneListResolver implements Resolve<any>{
+export class PhonesResolver implements Resolve<any>{
 
     constructor(private productService: ProductService) { }
     resolve(route: ActivatedRouteSnapshot){
-        return this.productService.getProduct(route.params["brandName"]);
+        return this.productService.getPhones(route.params["brandName"]);
     }
 }

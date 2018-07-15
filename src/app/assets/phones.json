@@ -16,7 +16,64 @@
          "NFC",
          "Google Maps"
       ],
-      "imageUrl":"./images/blackberry.png"
+      "imageUrl":"/assets/images/blackberry.png"
+   },
+   {  
+      "brand":"HTC",
+      "released":"2014",
+      "specification":{  
+         "version":" 6",
+         "color":"Silver",
+         "frontCamera":"5 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":12000,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/htc1.png"
+   },
+   {  
+      "brand":"HTC",
+      "released":"2016",
+      "specification":{  
+         "version":"7",
+         "color":"Black",
+         "frontCamera":"8 MP",
+         "rearCamera":"16 MP",
+         "RAM":"3 GB",
+         "internalStorage":"16 GB",
+         "volte":true
+      },
+      "cost":12000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/htc4.png"
+   },
+   {  
+      "brand":"HTC",
+      "released":"2017",
+      "specification":{  
+         "version":"8",
+         "color":"Black",
+         "frontCamera":"13 MP",
+         "rearCamera":"16 MP",
+         "RAM":"4 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":22000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/htc3.png"
    },
    {  
       "brand":"IPhone",
@@ -35,7 +92,7 @@
          "NFC",
          "Google Maps"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone4s.png"
    },
    {  
       "brand":"IPhone",
@@ -55,7 +112,7 @@
          "Google Maps",
          "4G"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone5s.png"
    },
    {  
       "brand":"IPhone",
@@ -75,7 +132,7 @@
          "Google Maps",
          "4G"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone5s_silver.png"
    },
    {  
       "brand":"IPhone",
@@ -95,7 +152,7 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone6s.png"
    },
    {  
       "brand":"IPhone",
@@ -115,13 +172,13 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone6s_pink.png"
    },
    {  
       "brand":"IPhone",
       "released":"2017",
       "specification":{  
-         "version":"7s",
+         "version":"7",
          "color":"Black",
          "frontCamera":"12 MP",
          "rearCamera":"18 MP",
@@ -135,13 +192,13 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone7_black.png"
    },
    {  
       "brand":"IPhone",
       "released":"2017",
       "specification":{  
-         "version":"7s",
+         "version":"7",
          "color":"Rose Gold",
          "frontCamera":"12 MP",
          "rearCamera":"18 MP",
@@ -155,7 +212,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone7_ros.png"
    },
    {  
       "brand":"IPhone",
@@ -175,7 +232,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/iphone7s_pink.png"
    },
    {  
       "brand":"Lenovo",
@@ -193,7 +250,7 @@
       "otherFeatures":[  
          "NFC"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/lenovo1.png"
    },
    {  
       "brand":"Lenovo",
@@ -213,7 +270,7 @@
          "4G",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/lenovo2.png"
    },
    {  
       "brand":"Lenovo",
@@ -233,7 +290,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/lenovo3.png"
    },
    {  
       "brand":"LG",
@@ -253,7 +310,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/lg.png"
    },
    {  
       "brand":"MI",
@@ -273,7 +330,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/mi.png"
    },
    {  
       "brand":"MI",
@@ -293,7 +350,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/mi2.png"
    },
    {  
       "brand":"Motorola",
@@ -312,7 +369,7 @@
          "NFC",
          "Google Maps"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/moto1.png"
    },
    {  
       "brand":"Motorola",
@@ -332,7 +389,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/moto2.png"
    },
    {  
       "brand":"Motorola",
@@ -352,7 +409,7 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/moto3.png"
    },
    {  
       "brand":"Nexus",
@@ -372,7 +429,61 @@
          "Google Maps",
          "Finger Print"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/nexus1.png"
+   },
+   {  
+      "brand":"Nokia",
+      "released":"2014",
+      "specification":{  
+         "version":"CA",
+         "color":"White",
+         "frontCamera":"No",
+         "rearCamera":"2 MP",
+         "RAM":"2 GB",
+         "internalStorage":"0.512 GB",
+         "volte":false
+      },
+      "cost":3500,
+      "otherFeatures":[  
+      ],
+      "imageUrl":"/assets/images/nokia2.png"
+   },
+   {  
+      "brand":"Nokia",
+      "released":"2017",
+      "specification":{  
+         "version":"6",
+         "color":"Black",
+         "frontCamera":"13 MP",
+         "rearCamera":"16 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":14500,
+      "otherFeatures":[  
+          "Finger Print"
+      ],
+      "imageUrl":"/assets/images/nokia1.png"
+   },
+   {  
+      "brand":"Nokia",
+      "released":"2017",
+      "specification":{  
+         "version":"7",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"4 GB",
+         "internalStorage":"54 GB",
+         "volte":true
+      },
+      "cost":17500,
+      "otherFeatures":[  
+          "Finger Print",
+          "Dual Camera"
+      ],
+      "imageUrl":"/assets/images/nokia3.png"
    },
    {  
       "brand":"Samsung",
@@ -390,7 +501,7 @@
       "otherFeatures":[  
          "Google Maps"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/samsung_c7.png"
    },
    {  
       "brand":"Samsung",
@@ -409,7 +520,7 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/samsung_c8.png"
    },
    {  
       "brand":"Samsung",
@@ -428,7 +539,7 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/samsung_j5.png"
    },
    {  
       "brand":"Samsung",
@@ -447,7 +558,7 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/samsung_j7.png"
    },
    {  
       "brand":"Sony",
@@ -465,7 +576,7 @@
       "otherFeatures":[  
          "Google Maps"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/sony.png"
    },
    {  
       "brand":"Sony",
@@ -483,7 +594,7 @@
       "otherFeatures":[  
          "Google Maps"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/sony1.png"
    },
    {  
       "brand":"Sony",
@@ -501,7 +612,7 @@
       "otherFeatures":[  
          "Google Maps"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/sony2.png"
    },
    {  
       "brand":"Sony",
@@ -520,7 +631,7 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/sony3.png"
    },
    {  
       "brand":"Sony",
@@ -539,7 +650,7 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/sony4.png"
    },
    {  
       "brand":"Sony",
@@ -558,7 +669,7 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/sony5.png"
    },
    {  
       "brand":"Sony",
@@ -577,7 +688,6 @@
          "Google Maps",
          "4G LTE"
       ],
-      "imageUrl":""
+      "imageUrl":"/assets/images/sony6.jpeg"
    }
 ]
-

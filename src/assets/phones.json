@@ -1,0 +1,693 @@
+[  
+	{  
+      "brand":"Blackberry",
+      "released":"2014",
+      "specification":{  
+         "version":"SD",
+         "color":"Silver",
+         "frontCamera":"2 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":22000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/blackberry.png"
+   },
+   {  
+      "brand":"HTC",
+      "released":"2014",
+      "specification":{  
+         "version":" 6",
+         "color":"Silver",
+         "frontCamera":"5 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":12000,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/htc1.png"
+   },
+   {  
+      "brand":"HTC",
+      "released":"2016",
+      "specification":{  
+         "version":"7",
+         "color":"Black",
+         "frontCamera":"8 MP",
+         "rearCamera":"16 MP",
+         "RAM":"3 GB",
+         "internalStorage":"16 GB",
+         "volte":true
+      },
+      "cost":12000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/htc4.png"
+   },
+   {  
+      "brand":"HTC",
+      "released":"2017",
+      "specification":{  
+         "version":"8",
+         "color":"Black",
+         "frontCamera":"13 MP",
+         "rearCamera":"16 MP",
+         "RAM":"4 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":22000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/htc3.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2014",
+      "specification":{  
+         "version":"4s",
+         "color":"Silver",
+         "frontCamera":"2 MP",
+         "rearCamera":"8 MP",
+         "RAM":"512 MB",
+         "internalStorage":"8 GB",
+         "volte":false
+      },
+      "cost":42000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/iphone4s.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2015",
+      "specification":{  
+         "version":"5s",
+         "color":"Black",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"1 GB",
+         "internalStorage":"12 GB",
+         "volte":false
+      },
+      "cost":48000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G"
+      ],
+      "imageUrl":"/assets/images/iphone5s.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2015",
+      "specification":{  
+         "version":"5s",
+         "color":"Silver",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"1 GB",
+         "internalStorage":"12 GB",
+         "volte":false
+      },
+      "cost":48000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G"
+      ],
+      "imageUrl":"/assets/images/iphone5s_silver.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2015",
+      "specification":{  
+         "version":"6s",
+         "color":"Black",
+         "frontCamera":"6 MP",
+         "rearCamera":"14 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":54000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/iphone6s.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2016",
+      "specification":{  
+         "version":"6s",
+         "color":"Pink",
+         "frontCamera":"6 MP",
+         "rearCamera":"14 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":64000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/iphone6s_pink.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2017",
+      "specification":{  
+         "version":"7",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":72000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/iphone7_black.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2017",
+      "specification":{  
+         "version":"7",
+         "color":"Rose Gold",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":72000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/iphone7_ros.png"
+   },
+   {  
+      "brand":"IPhone",
+      "released":"2017",
+      "specification":{  
+         "version":"7s",
+         "color":"Pink",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":72000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/iphone7s_pink.png"
+   },
+   {  
+      "brand":"Lenovo",
+      "released":"2016",
+      "specification":{  
+         "version":"1A",
+         "color":"Black",
+         "frontCamera":"2 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":8000,
+      "otherFeatures":[  
+         "NFC"
+      ],
+      "imageUrl":"/assets/images/lenovo1.png"
+   },
+   {  
+      "brand":"Lenovo",
+      "released":"2015",
+      "specification":{  
+         "version":"1B",
+         "color":"Yellow",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"2 GB",
+         "internalStorage":"32 GB",
+         "volte":false
+      },
+      "cost":10000,
+      "otherFeatures":[  
+         "NFC",
+         "4G",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/lenovo2.png"
+   },
+   {  
+      "brand":"Lenovo",
+      "released":"2017",
+      "specification":{  
+         "version":"2A",
+         "color":"Green",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":12000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/lenovo3.png"
+   },
+   {  
+      "brand":"LG",
+      "released":"2017",
+      "specification":{  
+         "version":"2A",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"18 MP",
+         "RAM":"4 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":24000,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/lg.png"
+   },
+   {  
+      "brand":"MI",
+      "released":"2016",
+      "specification":{  
+         "version":"3",
+         "color":"Yellow",
+         "frontCamera":"8 MP",
+         "rearCamera":"13 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/mi.png"
+   },
+   {  
+      "brand":"MI",
+      "released":"2017",
+      "specification":{  
+         "version":"4",
+         "color":"Yellow",
+         "frontCamera":"13 MP",
+         "rearCamera":"16 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/mi2.png"
+   },
+   {  
+      "brand":"Motorola",
+      "released":"2015",
+      "specification":{  
+         "version":"2",
+         "color":"Black",
+         "frontCamera":"5 MP",
+         "rearCamera":"8 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":9999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/moto1.png"
+   },
+   {  
+      "brand":"Motorola",
+      "released":"2016",
+      "specification":{  
+         "version":"3",
+         "color":"Black",
+         "frontCamera":"6 MP",
+         "rearCamera":"12 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/moto2.png"
+   },
+   {  
+      "brand":"Motorola",
+      "released":"2017",
+      "specification":{  
+         "version":"4",
+         "color":"Black",
+         "frontCamera":"13 MP",
+         "rearCamera":"18 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":11999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/moto3.png"
+   },
+   {  
+      "brand":"Nexus",
+      "released":"2017",
+      "specification":{  
+         "version":"3.4",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"21 MP",
+         "RAM":"3 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":34999,
+      "otherFeatures":[  
+         "NFC",
+         "Google Maps",
+         "Finger Print"
+      ],
+      "imageUrl":"/assets/images/nexus1.png"
+   },
+   {  
+      "brand":"Nokia",
+      "released":"2014",
+      "specification":{  
+         "version":"CA",
+         "color":"White",
+         "frontCamera":"No",
+         "rearCamera":"2 MP",
+         "RAM":"2 GB",
+         "internalStorage":"0.512 GB",
+         "volte":false
+      },
+      "cost":3500,
+      "otherFeatures":[  
+      ],
+      "imageUrl":"/assets/images/nokia2.png"
+   },
+   {  
+      "brand":"Nokia",
+      "released":"2017",
+      "specification":{  
+         "version":"6",
+         "color":"Black",
+         "frontCamera":"13 MP",
+         "rearCamera":"16 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":14500,
+      "otherFeatures":[  
+          "Finger Print"
+      ],
+      "imageUrl":"/assets/images/nokia1.png"
+   },
+   {  
+      "brand":"Nokia",
+      "released":"2017",
+      "specification":{  
+         "version":"7",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"4 GB",
+         "internalStorage":"54 GB",
+         "volte":true
+      },
+      "cost":17500,
+      "otherFeatures":[  
+          "Finger Print",
+          "Dual Camera"
+      ],
+      "imageUrl":"/assets/images/nokia3.png"
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2015",
+      "specification":{  
+         "version":"C7",
+         "color":"White",
+         "frontCamera":"5 MP",
+         "rearCamera":"13 MP",
+         "RAM":"1.5 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":9999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/samsung_c7.png"
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2016",
+      "specification":{  
+         "version":"C8",
+         "color":"Black",
+         "frontCamera":"8 MP",
+         "rearCamera":"13 MP",
+         "RAM":"3 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":12999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/samsung_c8.png"
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2017",
+      "specification":{  
+         "version":"J5",
+         "color":"Black",
+         "frontCamera":"12 MP",
+         "rearCamera":"16 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":false
+      },
+      "cost":14999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/samsung_j5.png"
+   },
+   {  
+      "brand":"Samsung",
+      "released":"2017",
+      "specification":{  
+         "version":"J7",
+         "color":"White",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":16999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/samsung_j7.png"
+   },
+   {  
+      "brand":"Sony",
+      "released":"2014",
+      "specification":{  
+         "version":"MA",
+         "color":"White",
+         "frontCamera":"5 MP",
+         "rearCamera":"8 MP",
+         "RAM":"1 GB",
+         "internalStorage":"8 GB",
+         "volte":false
+      },
+      "cost":12999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/sony.png"
+   },
+   {  
+      "brand":"Sony",
+      "released":"2015",
+      "specification":{  
+         "version":"CA",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"1 GB",
+         "internalStorage":"8 GB",
+         "volte":true
+      },
+      "cost":16999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/sony1.png"
+   },
+   {  
+      "brand":"Sony",
+      "released":"2016",
+      "specification":{  
+         "version":"Xperia",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":18999,
+      "otherFeatures":[  
+         "Google Maps"
+      ],
+      "imageUrl":"/assets/images/sony2.png"
+   },
+   {  
+      "brand":"Sony",
+      "released":"2016",
+      "specification":{  
+         "version":"Xperia Dual XA",
+         "color":"White",
+         "frontCamera":"8 MP",
+         "rearCamera":"13 MP",
+         "RAM":"2 GB",
+         "internalStorage":"16 GB",
+         "volte":false
+      },
+      "cost":15999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/sony3.png"
+   },
+   {  
+      "brand":"Sony",
+      "released":"2017",
+      "specification":{  
+         "version":"Xperia XA",
+         "color":"White",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":24999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/sony4.png"
+   },
+   {  
+      "brand":"Sony",
+      "released":"2017",
+      "specification":{  
+         "version":"Xperia XA",
+         "color":"Black",
+         "frontCamera":"16 MP",
+         "rearCamera":"21 MP",
+         "RAM":"3 GB",
+         "internalStorage":"32 GB",
+         "volte":true
+      },
+      "cost":24999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/sony5.png"
+   },
+   {  
+      "brand":"Sony",
+      "released":"2017",
+      "specification":{  
+         "version":"XZ",
+         "color":"White",
+         "frontCamera":"21 MP",
+         "rearCamera":"23 MP",
+         "RAM":"4 GB",
+         "internalStorage":"64 GB",
+         "volte":true
+      },
+      "cost":45999,
+      "otherFeatures":[  
+         "Google Maps",
+         "4G LTE"
+      ],
+      "imageUrl":"/assets/images/sony6.png"
+   }
+]

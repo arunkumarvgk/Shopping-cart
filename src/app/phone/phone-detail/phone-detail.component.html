@@ -1,0 +1,30 @@
+<div class="container">
+    <br>
+    <h2 style="align-content: center">{{phone.brand}} {{phone.specification.version}}</h2>
+    <md-grid-list cols="2" rowHeight="250px">
+        <md-grid-tile [colspan]="1" [rowspan]="2" style="background-color:#ffffff;"> 
+            <img [src]="phone?.imageUrl" [alt]="phone?.specification.version" class="img-rounded" [alt]="phone.specification.version"  height="500">
+        </md-grid-tile>
+        <md-grid-tile [colspan]="1" [rowspan]="2" style="background-color:#ffffff;">
+            <div  class="well hoverwell thumbnail" >
+                <h3>{{phone.brand}} {{phone.specification.version}}</h3>
+                <div><b>Released in </b> {{phone.released}}</div>
+                <div><b>Price </b> {{ phone.cost | currency:"INR":true}}</div>
+                <div><b>Version </b> {{phone.specification.version}}</div>
+                <div><b>Color </b> {{phone.specification.color}}</div>
+                <div><b>Front Camera </b> {{phone.specification.frontCamera}}</div>
+                <div><b>Rear Camera </b> {{phone.specification.rearCamera}}</div>
+                <div><b>Internal Storage </b> {{phone.specification.internalStorage}}</div>
+                <div><b>VOLTE Support  </b> {{phone.specification.volte}}</div>
+                <div>
+                    <b>Other Features </b>
+                    <span *ngFor="let fea of phone?.otherFeatures"><i>{{fea}}</i>,</span>
+                </div>
+                <div style="align-content: center">
+                    <button md-raised-button color="accent" [disabled]="!isUserLogged">Buy</button> 
+                    <button md-raised-button color="primary">Add to Cart</button>
+                </div>
+            </div>
+        </md-grid-tile>
+    </md-grid-list>
+</div>

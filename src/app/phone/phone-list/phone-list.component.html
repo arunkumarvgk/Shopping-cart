@@ -1,10 +1,25 @@
 <div class="container">
-  <md-grid-list cols="4" rowHeight="100px">
+  <md-grid-list cols="4" rowHeight="160px">
     <md-grid-tile
         *ngFor="let phone of products"
         [colspan]="2"
-        [rowspan]="4">
-    {{phone.brand}} {{phone.specification.version}}
+        [rowspan]="4"
+        style="background-color:#ffffff;">
+    
+      <div  class="well hoverwell thumbnail" >
+          <img [src]="phone?.imageUrl" [alt]="phone?.specification.version" class="img-rounded" [alt]="phone.specification.version"  height="500">
+
+          <a href="" [routerLink]="['/phone/list',phone.brand,phone.specification.version]" >
+            <h2>{{phone.brand}} {{phone.specification.version}}</h2>
+          </a>
+          
+          <div>Released in {{phone.released}}</div>
+          <div>Price : {{ phone.cost | currency:"INR":true}}</div>
+          <div style="align-content: center">
+            <button md-raised-button color="accent" [disabled]="!isUserLogged">Buy</button> 
+            <button md-raised-button color="primary">Add to Cart</button>
+          </div>
+      </div>
     </md-grid-tile>
   </md-grid-list>
 </div>

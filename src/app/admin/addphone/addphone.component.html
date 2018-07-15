@@ -1,0 +1,204 @@
+<div class="container">
+  <hr>
+	<h4>Add Phone</h4>
+	<hr>
+  <button class="btn btn-primary" *ngIf="!isTDForm" (click)="isTDForm=!isTDForm ; tdAddPhoneFrm && tdAddPhoneFrm.reset();">Template Driven</button>
+  <button class="btn btn-primary" *ngIf="isTDForm" (click)="isTDForm=!isTDForm ; rAddPhoneFrm && rAddPhoneFrm.reset();">Reactive</button>
+  <hr>
+  <div *ngIf="isTDForm">
+    <form class="form-horizontal" #tdAddPhoneFrm="ngForm" novalidate>
+      <h5>Template Driven Form</h5>
+      <hr>
+      <div class="form-group">
+        <label for="brand" class="cols-sm-2 control-label">Brand</label>
+        <em  *ngIf="tdAddPhoneFrm.controls.brand?.invalid && tdAddPhoneFrm.controls.brand?.touched">required</em>
+        <input class="form-control"  type="text" ngModel name="brand" id="brand"  required/>
+      </div>
+
+      <div class="form-group">
+        <label for="releasedYear" class="cols-sm-2 control-label">Released Year</label>
+        <em  *ngIf="tdAddPhoneFrm.controls.releasedYear?.invalid && tdAddPhoneFrm.controls.releasedYear?.dirty && tdAddPhoneFrm.controls.releasedYear?.errors?.tooOld ">Old phone should be released after 2010 </em>
+        <em  *ngIf="tdAddPhoneFrm.controls.releasedYear?.invalid && tdAddPhoneFrm.controls.releasedYear?.dirty && tdAddPhoneFrm.controls.releasedYear?.errors?.veryNew ">cant't wait till {{tdAddPhoneFrm.controls.releasedYear?.errors?.veryNew?.value}} should be released before 2018 </em>
+        <em  *ngIf="tdAddPhoneFrm.controls.releasedYear?.invalid && tdAddPhoneFrm.controls.releasedYear?.dirty && tdAddPhoneFrm.controls.releasedYear?.errors?.required">required </em>
+        <em  *ngIf="tdAddPhoneFrm.controls.releasedYear?.invalid && tdAddPhoneFrm.controls.releasedYear?.dirty && tdAddPhoneFrm.controls.releasedYear?.errors?.invalidInput">Invalid Year </em>
+        <input class="form-control"  type="text" ngModel name="releasedYear"  id="releasedYear"  required releasedYearValidate />
+      </div>
+
+      <div ngModelGroup="specification" #specificationGroup="ngModelGroup" validatePhoneSpecifications>
+        <div class="form-group">
+          <label for="version" class="cols-sm-2 control-label">Version</label>
+          <em  *ngIf="specificationGroup.errors?.invalidVersion">Have dot separated eg(4.3)</em>
+          <em  *ngIf="specificationGroup.errors?.versionInNumbers">Follow [num].[num] format</em>
+          <em  *ngIf="versionField?.invalid &&  versionField?.dirty && versionField?.errors.required">required</em>
+          <input class="form-control"  type="text" ngModel name="version"  id="version"  #versionField="ngModel"  required />
+          
+          <label for="color" class="cols-sm-2 control-label">Colour</label>
+          <em  *ngIf="specificationGroup.invalid && specificationGroup?.errors?.colorNotAllowed ">Only Red, Blue, Green, Yellow</em>
+          <em  *ngIf="colorField?.invalid && colorField?.touched && colorField?.errors.required">required</em>
+          <input class="form-control"  type="text" ngModel name="color"  id="color" #colorField="ngModel"  required />
+        
+          <label for="frontCamera" class="cols-sm-2 control-label">Front Camera</label>
+          <em  *ngIf="frontCameraField?.invalid && frontCameraField?.touched && frontCameraField?.errors.required">required</em>
+          <em  *ngIf="specificationGroup.errors?.fcNumberFormat">Enter in numbers only</em>
+          <em  *ngIf="specificationGroup.errors?.fcTooHigh">{{specificationGroup.errors?.fcTooHigh.value}} MP Camera is too high</em>
+          <em  *ngIf="specificationGroup.errors?.fcTooLow">{{specificationGroup.errors?.fcTooLow.value}} MP Camera is too low</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" ngModel name="frontCamera"  id="frontCamera" #frontCameraField="ngModel"  required />
+            <span class="input-group-addon" id="basic-addon2">Mega Pixles</span>
+          </div>
+
+          <label for="rearCamera" class="cols-sm-2 control-label">Rear Camera</label>
+          <em  *ngIf="rearCameraField?.invalid && rearCameraField?.touched && rearCameraField?.errors.required">required</em>
+          <em  *ngIf="specificationGroup.errors?.rcNumberFormat">Enter in numbers only</em>
+          <em  *ngIf="specificationGroup.errors?.rcTooHigh">{{specificationGroup.errors?.rcTooHigh.value}} MP Camera is too high</em>
+          <em  *ngIf="specificationGroup.errors?.rcTooLow">{{specificationGroup.errors?.rcTooLow.value}} MP Camera is too low</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" ngModel name="rearCamera"  id="rearCamera" #rearCameraField="ngModel"  required />
+            <span class="input-group-addon" id="basic-addon2">Mega Pixles</span>
+          </div>
+        
+          <label for="ram" class="cols-sm-2 control-label">RAM</label>
+          <em  *ngIf="ramField?.invalid && ramField?.touched && ramField?.errors.required">required</em>
+          <em  *ngIf="specificationGroup.errors?.ramNumberFormat">Enter in numbers only</em>
+          <em  *ngIf="specificationGroup.errors?.ramTooHigh">{{specificationGroup.errors?.ramTooHigh.value}} GB RAM is <b>{{(((specificationGroup.errors?.ramTooHigh.value/6)*100)-100)|number:'1.2-2'}}% </b>
+  higher than required</em>
+          <em  *ngIf="specificationGroup.errors?.ramTooLow">{{specificationGroup.errors?.ramTooLow.value}} GB RAM is <b>{{((100-(specificationGroup.errors?.ramTooLow.value/6)*100))|number:'1.2-2'}}% </b>
+  lesser than required</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" ngModel name="ram"  id="ram" #ramField="ngModel"  required />
+            <span class="input-group-addon" id="basic-addon2">Giga Byte</span>
+          </div>
+
+          <label for="internalStorage" class="cols-sm-2 control-label">Internal Storage</label>
+          <em  *ngIf="internalStorageField?.invalid &&  internalStorageField?.touched && internalStorageField?.errors.required">required</em>
+          <em  *ngIf="specificationGroup.errors?.enterRam">RAM Required</em>
+          <em  *ngIf="specificationGroup.errors?.insNumberFormat">Enter in numbers only</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" ngModel name="internalStorage"  id="internalStorage" #internalStorageField="ngModel"  required />
+            <span class="input-group-addon" id="basic-addon2">Giga Byte</span>
+          </div>
+
+          <label for="volet" class="cols-sm-2 control-label">VOLTE Support</label>
+          <em  *ngIf="voletField?.invalid && voletField?.touched && voletField?.errors.required">required</em>
+          <input class="form-control"  type="text" ngModel name="volet"  id="volet" #voletField="ngModel"  required />
+        </div> 
+      </div>
+
+      <div class="form-group">
+          <button [disabled]="tdAddPhoneFrm.invalid" class="btn btn-primary">Add</button>
+          <button  class="btn btn-basic">Cancle</button>
+      </div>
+
+    </form>
+  </div>
+
+  <div *ngIf="!isTDForm">
+    <form class="form-horizontal" [formGroup]="rAddPhoneFrm" (ngSubmit)="onSubmitReactive(rAddPhoneFrm)" novalidate>		
+      <h5>Reactive Form</h5>
+      <hr>
+      <div class="form-group">
+        <label for="brand" class="cols-sm-2 control-label">Brand</label>
+        <em *ngIf="brand.invalid && brand.dirty && brand?.errors.required"> Required </em>
+				<em *ngIf="brand.invalid && brand.dirty && brand?.errors.minlength"> Min length 4 &nbsp;</em>
+        <em *ngIf="brand.invalid && brand.dirty && brand?.errors.initCapReq"> Initial letter should be in capital &nbsp;</em>
+        <input class="form-control"  type="text" formControlName="brand" name="brand" id="brand"  validate-onblur/>
+      </div>
+
+      <div class="form-group">
+        <label for="releasedYear" class="cols-sm-2 control-label">Released Year</label>
+        <em *ngIf="releasedYear.invalid && releasedYear.dirty && releasedYear?.errors.required"> Required</em>
+        <em *ngIf="releasedYear.invalid && releasedYear.dirty && releasedYear?.errors.invalidReleaseYear"> Enter year boss not junk </em>
+        <em *ngIf="releasedYear.invalid && releasedYear.dirty && releasedYear?.errors.validationresult">
+          {{
+            releasedYear?.errors.validationresult.value>0 ? 
+               "Cant wait more than 7 years"  
+            :  "Older than 7 years" }}
+        </em>
+        <em *ngIf="releasedYear.invalid && releasedYear.dirty && releasedYear?.errors.oldPhone"> No one will buy {{releasedYear?.errors.oldPhone.value|number}} year/years old phone</em>
+        <input class="form-control"  type="text" formControlName="releasedYear" name="releasedYear"  id="releasedYear"   validate-onblur />
+      </div>
+
+      
+        <div class="form-group">
+          <label for="version" class="cols-sm-2 control-label">Version</label>
+           <em *ngIf="version.invalid && version.dirty && version?.errors.required"> Required </em>
+				   <em *ngIf="version.invalid && version.dirty && version?.errors.maxlength"> Max length 4 &nbsp;</em>
+           <em *ngIf="version.invalid && version.dirty && version?.errors.dotSeperated"> Follow X.X eg. 4.5 &nbsp;</em>
+           <em *ngIf="version.invalid && version.dirty && version?.errors.invalidVersion"> Only Numbers &nbsp;</em>
+          <input class="form-control"  type="text" formControlName="version" name="version"  id="version"  validate-onblur/>
+        </div>
+
+        <div class="form-group">
+          <label for="color" class="cols-sm-2 control-label">Colour</label>
+          <em *ngIf="color.invalid && color.dirty && color?.errors.required"> Required</em>
+          <em *ngIf="color.invalid && color.dirty && color?.errors.invalidColor"> Enter in string</em>
+          <em *ngIf="color.invalid && color.dirty && color?.errors.onlyRBGY"> <b>{{color?.errors.onlyRBGY.value}}</b> is invalid color use one of these <b>[Red, Blue, Green, Yellow]</b></em>
+          <input class="form-control"  type="text" formControlName="color" name="color"  id="color"  validate-onblur/>
+        </div>
+
+        <div class="form-group">
+          <label for="frontCamera" class="cols-sm-2 control-label">Front Camera</label>
+          <em *ngIf="frontCamera.invalid && frontCamera.dirty && frontCamera?.errors.required"> Required</em>
+          <em *ngIf="frontCamera.invalid && frontCamera.dirty && frontCamera?.errors.invalidFrontCamera"> Enter in number </em>
+          <em *ngIf="frontCamera.invalid && frontCamera.dirty && frontCamera?.errors.fcNotInRange"> Should be between <b>12-32</b></em>
+          <em *ngIf="frontCamera.invalid && frontCamera.dirty && frontCamera?.errors.notOdd"> Enter in even number</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" formControlName="frontCamera" name="frontCamera"  id="frontCamera"  validate-onblur/>
+            <span class="input-group-addon" id="basic-addon2">Mega Pixles</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="rearCamera" class="cols-sm-2 control-label">Rear Camera</label>
+          <em *ngIf="rearCamera.invalid && rearCamera.dirty && rearCamera?.errors.required"> Required</em>
+          <em *ngIf="rearCamera.invalid && rearCamera.dirty && rearCamera?.errors.invalidRearCamera"> Enter in number </em>
+          <em *ngIf="rearCamera.invalid && rearCamera.dirty && rearCamera?.errors.fcRcNotMatching">Rear Camera should be 40-50% more than Front Camera but now it is 
+            <b>{{rearCamera?.errors.fcRcNotMatching.value|number:'1.2-2'}} % {{rearCamera?.errors.fcRcNotMatching.value >0 ? "more":"less"}}</b></em>
+          <div class="input-group">
+            <input  aria-describedby="basic-addon2" class="form-control"  type="text" formControlName="rearCamera" name="rearCamera"  id="rearCamera"   />
+            <span class="input-group-addon" id="basic-addon2">Mega Pixles</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="ram" class="cols-sm-2 control-label">RAM</label>
+          <em *ngIf="ram.invalid && ram.dirty && ram?.errors.required"> Required</em>
+          <em *ngIf="ram.invalid && ram.dirty && ram?.errors.ramNotInRange"> Range <b>3-6</b></em>
+          <em *ngIf="ram.invalid && ram.dirty && ram?.errors.invalidRAM"> Invalid entry</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" formControlName="ram" name="ram"  id="ram"    />
+            <span class="input-group-addon" id="basic-addon2">Giga Byte</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="internalStorage" class="cols-sm-2 control-label">Internal Storage</label>
+          <em *ngIf="internalStorage.invalid && internalStorage.dirty && internalStorage?.errors.required"> Required</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" formControlName="internalStorage" name="internalStorage"  id="internalStorage"   />
+            <span class="input-group-addon" id="basic-addon2">Giga Byte</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="volet" class="cols-sm-2 control-label">VOLTE Support</label>
+          <em *ngIf="volet.invalid && volet.dirty && volet?.errors.required"> Required</em>
+          <p>
+          <input class="form-control"  type="radio" formControlName="volet" name="volet"  id="volet"  value="true"/>True
+          <input class="form-control"  type="radio" formControlName="volet" name="volet"  id="volet"  value="false"/>False
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="imageUrl" class="cols-sm-2 control-label">Image URL</label>
+          <em>Just provide image name and add the image to app/assets/images</em>
+          <div class="input-group">
+            <input aria-describedby="basic-addon2" class="form-control"  type="text" formControlName="imageUrl" name="imageUrl"  id="imageUrl"   />
+          </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" [disabled]="rAddPhoneFrm.invalid" class="btn btn-primary">Add</button>
+            <button (click)="rAddPhoneFrm.reset" class="btn btn-basic">Cancle</button>
+        </div>
+
+    </form>
+  <div>
+</div>

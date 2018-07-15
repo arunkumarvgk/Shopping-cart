@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { LoginService } from "app/user/login/login.service";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute, Resolve } from "@angular/router";
 import { ProductService } from "app/services/product.service";
 import { Product } from "app/product";
 
@@ -13,23 +13,19 @@ export class NavComponent implements OnInit {
 
   title: string = "VGK Product";
   products: Product[];
-  brands: any;
-  
+  brands:Array<string>;
+
   constructor(public loginService: LoginService , 
               private router: Router,
-              private productService: ProductService) { }
+              private productService: ProductService,
+              private activatedRoute:ActivatedRoute,) { }
 
   ngOnInit() {
-    /*this.productService.getProducts().subscribe((product)=>{
-      console.log("=======> "+product);
-    });
-
-    this.productService.getProducts()
-                .subscribe(products => this.products = products);*/
-    
-    console.log(this.productService.getProducts());
-    this.products=<Product[]>this.productService.getProducts();
-    this.brands =  new Set(this.products.map(item => item.brand));
+    this.productService.getProductsList()
+      .subscribe(products => {
+        this.brands=products;         
+        return this.brands;
+      });
   }
 
   signOut(){

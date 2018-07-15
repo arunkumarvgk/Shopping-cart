@@ -1,13 +1,13 @@
 <md-card >   
-  <md-tab-group style="background-color:#028e92" [selectedIndex]="type">
+  <md-tab-group  [selectedIndex]="type">
     <md-tab label="Profile">
       <hr>
       <span><b>Name : </b></span>
-      {{profileObject.firstName}} {{profileObject.lastName}} <br><br>
+      {{profileObject?.firstName}} {{profileObject?.lastName}} <br><br>
       <span><b>Username : </b></span>
-      {{profileObject.userName}} <br><br>
+      {{profileObject?.userName}} <br><br>
       <span><b>Email-ID : </b></span>
-      {{profileObject.userName}}@cisco.com<br><br>
+      {{profileObject?.userName}}@cisco.com<br><br>
       <span><b>Active Since : </b></span>
       {{activeSince | date}}<br><br>
       <span><b>Last Login : </b></span>

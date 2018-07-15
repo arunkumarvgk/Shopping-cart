@@ -4,7 +4,7 @@
 			<hr>
 			<div class="row main">
 				<div class="main-login main-center">
-					<form class="form-horizontal" [formGroup]="registerForm" novalidate>		
+					<form class="form-horizontal" [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)" novalidate>		
 						<div class="form-group" [ngClass]="{'error':name.invalid && name.dirty}">
 							<label for="name" class="cols-sm-2 control-label">Your Name</label>
 							<em *ngIf="name.invalid && name.dirty && name?.errors.required"> Required </em>
@@ -69,7 +69,7 @@
 						</div>
 
 						<div class="form-group">
-							<button [disabled]="registerForm.invalid" class="btn btn-primary">Register</button>
+							<button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">Register</button>
 							<button  (click)="cancleRegistration()" class="btn btn-basic">Cancle</button>
 						</div>
 					</form>

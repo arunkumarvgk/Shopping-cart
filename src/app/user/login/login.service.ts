@@ -8,28 +8,12 @@ export class LoginService {
 
     constructor(private http:Http){}
 
-    loginUser(userType: string, userName: string, password: string){
-        if ((userType == "Customer" && userName === "arun" && password === "kiran")) {
-            this.currentUser={
-                userType:userType,
-                userName:userName,
-                firstName:"ArunKumar",
-                lastName:"Venkatesh"
-            }
-            return true;
-        }else if(userType == "Admin" && userName === "kiran" && password === "arun"){
-            this.currentUser={
-                userType:userType,
-                userName:userName,
-                firstName:"KiranKumar",
-                lastName:"Venkatesh"
-            }
-            return true;
-        }   
+    loginUser(userType: string, username: string, password: string){
+      return this.http.post("http://localhost:7075/authorizeUser",{username,password})
     }
 
     isAuthenticated():any{
-        return this.currentUser["userType"] ? true :false;
+        return this.currentUser["name"] ? true :false;
     }
 
     getProfile(){

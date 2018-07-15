@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 import { FormControl, FormGroup, Validators, ValidatorFn } from "@angular/forms";
+import { Customer } from "app/model/customer.model";
+import { CustomerService } from "app/services/customer.service";
 
 @Component({
   selector: "register-user",
@@ -19,9 +21,10 @@ export class RegisterUserComponent implements OnInit {
   password: FormControl;
   confirmPassword: FormControl;
 
+  customer: Customer;
   @Output() onCancle : EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() {
+  constructor(private customerService:CustomerService) {
   }
 
   ngOnInit() {
@@ -37,6 +40,16 @@ export class RegisterUserComponent implements OnInit {
       userName: this.userName,
       password: this.password,
       confirmPassword: this.confirmPassword
+    });
+  }
+
+  onSubmit(regForm:FormGroup){
+    this.customer = new Customer(this.name.value,this.email.value,this.userName.value,this.password.value,'false');
+    this.customerService.addCustomer(this.customer)
+    .subscribe(res=>{
+      alert("Successfully Registered");
+    },err=>{
+      alert("Failed to register");
     });
   }
 
